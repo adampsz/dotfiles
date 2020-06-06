@@ -37,7 +37,7 @@ After that, you can delete cloned repo.
   - [`fast-syntax-highlighting`](https://github.com/zdharma/fast-syntax-highlighting)
   - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
   - [`zsh-completions`](https://github.com/zsh-users/zsh-completions)
-  - [`history-search-multi-word`](https://zdharma/history-search-multi-word) (hit `ctrl+R`)
+  - [`history-search-multi-word`](https://github.com/zdharma/history-search-multi-word) (hit `ctrl+R`)
   - and others:
     [`undollar`](https://github.com/zpm-zsh/undollar),
     [`colorize`](https://github.com/zpm-zsh/colorize),
