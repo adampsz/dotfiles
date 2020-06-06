@@ -1,10 +1,8 @@
 # .dotfiles
 
-<center>
-
-![screenshot](./images/screenshot.png?1)
-
-</center>
+<p align="center">
+  <img alt="screenshot" src="./images/screenshot.png">
+</p>
 
 ## Installation
 
