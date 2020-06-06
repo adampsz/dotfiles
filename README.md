@@ -41,4 +41,4 @@ After that, you can delete cloned repo.
     [`colorize`](https://github.com/zpm-zsh/colorize),
     [`zsh-autopair`](https://github.com/hlissner/zsh-autopair),
     [`zsh-you-should-use`](https://github.com/MichaelAquilina/zsh-you-should-use),
-- Starts under **10ms** (!) on my (not so good) machine
+- Starts under **70ms** (!) on my (not so good) machine
