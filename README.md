@@ -28,7 +28,6 @@ After that, you can delete cloned repo.
     `command-not-found`,
     `common-aliases`,
     `git`,
-    `screen`,
     `sudo` (hit `esc` twice),
     `vscode`,
     `yarn`

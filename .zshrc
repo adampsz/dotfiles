@@ -67,7 +67,6 @@ zinit wait'1' lucid light-mode for \
 
 # Load plugins for specific commands or systems
 zinit light-mode has'pacman' for OMZP::archlinux
-zinit light-mode has'screen' for OMZP::screen
 zinit light-mode has'code' for OMZP::vscode
 zinit light-mode has'yarn' for OMZP::yarn
 
