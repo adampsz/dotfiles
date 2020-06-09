@@ -64,7 +64,7 @@ zinit wait'1' lucid light-mode for \
   has'yarn' OMZP::yarn \
   zdharma/history-search-multi-word \
   zpm-zsh/undollar \
-  src'colorize.plugin.zsh' zpm-zsh/colorize \
+  zpm-zsh/colorize \
   hlissner/zsh-autopair \
   MichaelAquilina/zsh-you-should-use
 
