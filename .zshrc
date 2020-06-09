@@ -59,16 +59,14 @@ zinit wait'1' lucid light-mode for \
   OMZP::common-aliases \
   OMZP::git \
   OMZP::sudo \
+  has'pacman' OMZP::archlinux \
+  has'code' OMZP::vscode \
+  has'yarn' OMZP::yarn \
   zdharma/history-search-multi-word \
   zpm-zsh/undollar \
   src'colorize.plugin.zsh' zpm-zsh/colorize \
   hlissner/zsh-autopair \
   MichaelAquilina/zsh-you-should-use
-
-# Load plugins for specific commands or systems
-zinit light-mode has'pacman' for OMZP::archlinux
-zinit light-mode has'code' for OMZP::vscode
-zinit light-mode has'yarn' for OMZP::yarn
 
 # Add user binaries from ~/bin to path
 path+=("$HOME/bin")
