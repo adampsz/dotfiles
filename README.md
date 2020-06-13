@@ -24,13 +24,19 @@ After that, you can delete cloned repo.
   - [`pure`](https://github.com/sindresorhus/pure) prompt, but with classic dollar
   - [`oh-my-zsh`](https://github.com/ohmyzsh/ohmyzsh/) lib (not whole, only those parts that are useful)
   - `oh-my-zsh` plugins:
-    `archlinux`,
     `command-not-found`,
     `common-aliases`,
     `git`,
-    `sudo` (hit `esc` twice),
+    `sudo` (hit `esc` twice)
+  - conditionally loaded plugins, based on environment:
+    `archlinux`,
+    `debian`,
+    `dnf`,
+    `suse`,
+    `ubuntu`,
     `vscode`,
-    `yarn`
+    `yarn`,
+    `yum`
   - [`fast-syntax-highlighting`](https://github.com/zdharma/fast-syntax-highlighting)
   - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions)
   - [`zsh-completions`](https://github.com/zsh-users/zsh-completions)
