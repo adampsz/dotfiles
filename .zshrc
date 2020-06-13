@@ -59,14 +59,22 @@ zinit wait'1' lucid light-mode for \
   OMZP::common-aliases \
   OMZP::git \
   OMZP::sudo \
-  has'pacman' OMZP::archlinux \
-  has'code' OMZP::vscode \
-  has'yarn' OMZP::yarn \
   zdharma/history-search-multi-word \
   zpm-zsh/undollar \
   zpm-zsh/colorize \
   hlissner/zsh-autopair \
   MichaelAquilina/zsh-you-should-use
+
+# Load environment-specific plugins
+zinit wait'2' lucid light-mode for \
+  has'code' OMZP::vscode \
+  has'yarn' OMZP::yarn \
+  if'[ -f /etc/arch-release ]' OMZP::archlinux \
+  if'[ -f /etc/debian-version ]' OMZP::debian \
+  if'[ -n "$(cat /etc/os-release | grep ^NAME | grep Ubuntu)" ]' OMZP::ubuntu \
+  has'dnf' OMZP::dnf \
+  has'yum' OMZP::yum \
+  has'zypper' OMZP::suse \
 
 # Add user binaries from ~/bin to path
 path+=("$HOME/bin")
