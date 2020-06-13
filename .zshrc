@@ -74,7 +74,7 @@ zinit wait'2' lucid light-mode for \
   if'[ -n "$(grep -s ^NAME /etc/os-release | grep Ubuntu)" ]' OMZP::ubuntu \
   has'dnf' OMZP::dnf \
   has'yum' OMZP::yum \
-  has'zypper' OMZP::suse \
+  has'zypper' OMZP::suse
 
 # Add user binaries from ~/bin to path
 path+=("$HOME/bin")
