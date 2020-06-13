@@ -71,7 +71,7 @@ zinit wait'2' lucid light-mode for \
   has'yarn' OMZP::yarn \
   if'[ -f /etc/arch-release ]' OMZP::archlinux \
   if'[ -f /etc/debian-version ]' OMZP::debian \
-  if'[ -n "$(cat /etc/os-release | grep ^NAME | grep Ubuntu)" ]' OMZP::ubuntu \
+  if'[ -n "$(grep -s ^NAME /etc/os-release | grep Ubuntu)" ]' OMZP::ubuntu \
   has'dnf' OMZP::dnf \
   has'yum' OMZP::yum \
   has'zypper' OMZP::suse \
