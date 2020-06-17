@@ -51,7 +51,8 @@ zinit light-mode for \
 # Load less important zsh plugins
 # directories.zsh - allows traversing using `...`, `1`, etc
 zinit wait lucid light-mode for \
-  OMZL::directories.zsh
+  OMZL::directories.zsh \
+  OMZL::theme-and-appearance.zsh
 
 # Load various zsh plugins after some time
 zinit wait'1' lucid light-mode for \
