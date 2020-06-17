@@ -69,6 +69,8 @@ zinit wait'1' lucid light-mode for \
 # Load environment-specific plugins
 zinit wait'2' lucid light-mode for \
   has'code' OMZP::vscode \
+  has'docker' OMZ::plugins/docker/_docker \
+  has'docker-compose' OMZP::docker-compose \
   has'yarn' OMZP::yarn \
   if'[ -f /etc/arch-release ]' OMZP::archlinux \
   if'[ -f /etc/debian-version ]' OMZP::debian \
