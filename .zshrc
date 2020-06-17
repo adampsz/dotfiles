@@ -77,4 +77,6 @@ zinit wait'2' lucid light-mode for \
   has'zypper' OMZP::suse
 
 # Add user binaries from ~/bin to path
-path+=("$HOME/bin")
+[ -d "$HOME/bin" ] && path+=("$HOME/bin")
+[ -d "$HOME/.yarn" ] && path+=("$HOME/.yarn/bin")
+[ -d "$HOME/.local/bin" ] && path+=("$HOME/.local/bin")
