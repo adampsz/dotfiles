@@ -73,7 +73,7 @@ zinit wait'2' lucid light-mode for \
   has'docker-compose' OMZP::docker-compose \
   has'yarn' OMZP::yarn \
   if'[ -f /etc/arch-release ]' OMZP::archlinux \
-  if'[ -f /etc/debian-version ]' OMZP::debian \
+  if'[ -f /etc/debian_version ]' OMZP::debian \
   if'[ -n "$(grep -s ^NAME /etc/os-release | grep Ubuntu)" ]' OMZP::ubuntu \
   has'dnf' OMZP::dnf \
   has'yum' OMZP::yum \
