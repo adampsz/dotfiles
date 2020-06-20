@@ -83,3 +83,5 @@ zinit wait'2' lucid light-mode for \
 [ -d "$HOME/bin" ] && path+=("$HOME/bin")
 [ -d "$HOME/.yarn" ] && path+=("$HOME/.yarn/bin")
 [ -d "$HOME/.local/bin" ] && path+=("$HOME/.local/bin")
+
+true
