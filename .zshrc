@@ -17,13 +17,9 @@ zinit light-mode for \
   zinit-zsh/z-a-bin-gem-node
 
 
-# Configure and load pure prompt
-PURE_PROMPT_SYMBOL='$' # Keep classic dollar
-PURE_PROMPT_VICMD_SYMBOL=':' # Very vimish
-zstyle :prompt:pure:prompt:success color green
-
-zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
-zinit light sindresorhus/pure
+# Load powerlevel10k prompt
+zinit light-mode for \
+  romkatv/powerlevel10k
 
 
 # Load syntax highlighting, autosuggestions and completions
@@ -62,9 +58,9 @@ zinit wait'1' lucid light-mode for \
   OMZP::sudo \
   zdharma/history-search-multi-word \
   zpm-zsh/undollar \
-  zpm-zsh/colorize \
   hlissner/zsh-autopair \
-  MichaelAquilina/zsh-you-should-use
+  MichaelAquilina/zsh-you-should-use \
+  if'[ ! -f /bin/busybox ]' zpm-zsh/colorize
 
 # Load environment-specific plugins
 zinit wait'2' lucid light-mode for \
@@ -72,6 +68,7 @@ zinit wait'2' lucid light-mode for \
   has'docker' OMZ::plugins/docker/_docker \
   has'docker-compose' OMZP::docker-compose \
   has'yarn' OMZP::yarn \
+  has'poetry' atpull'%atclone' atclone'poetry completions zsh > _poetry' MichaelAquilina/zsh-autoswitch-virtualenv \
   if'[ -f /etc/arch-release ]' OMZP::archlinux \
   if'[ -f /etc/debian_version ]' OMZP::debian \
   if'[ -n "$(grep -s ^NAME /etc/os-release | grep Ubuntu)" ]' OMZP::ubuntu \
@@ -79,9 +76,13 @@ zinit wait'2' lucid light-mode for \
   has'yum' OMZP::yum \
   has'zypper' OMZP::suse
 
-# Add user binaries from ~/bin to path
+# Add various folders to path
 [ -d "$HOME/bin" ] && path+=("$HOME/bin")
 [ -d "$HOME/.yarn" ] && path+=("$HOME/.yarn/bin")
 [ -d "$HOME/.local/bin" ] && path+=("$HOME/.local/bin")
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Don't start with error
 true

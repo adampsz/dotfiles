@@ -1,4 +1,4 @@
-# .dotfiles
+# .files
 
 <p align="center">
   <img alt="screenshot" src="./images/screenshot.png">
@@ -10,7 +10,7 @@ Open terminal and navigate to any directory, then type (or paste) following comm
 
 ```shell
 $ git clone https://github.com/adampsz/dotfiles && cd dotfiles
-$ ./copy.sh
+$ ./install.sh
 ```
 
 After that, you can delete cloned repo.
@@ -20,8 +20,9 @@ After that, you can delete cloned repo.
 ### `.zshrc`
 
 - Based on [`zinit`](https://github.com/zdharma/zinit) plugin manager
+- Starts under **70ms** (!) on my (not so good) machine
 - Includes:
-  - [`pure`](https://github.com/sindresorhus/pure) prompt, but with classic dollar
+  - [`powerlvel10k`](https://github.com/romkatv/powerlevel10k) prompt, but with classic dollar
   - [`oh-my-zsh`](https://github.com/ohmyzsh/ohmyzsh/) lib (not whole, only those parts that are useful)
   - `oh-my-zsh` plugins:
     `command-not-found`,
@@ -42,8 +43,15 @@ After that, you can delete cloned repo.
   - [`zsh-completions`](https://github.com/zsh-users/zsh-completions)
   - [`history-search-multi-word`](https://github.com/zdharma/history-search-multi-word) (hit `ctrl+R`)
   - and others:
-    [`undollar`](https://github.com/zpm-zsh/undollar),
-    [`colorize`](https://github.com/zpm-zsh/colorize),
-    [`zsh-autopair`](https://github.com/hlissner/zsh-autopair),
-    [`zsh-you-should-use`](https://github.com/MichaelAquilina/zsh-you-should-use),
-- Starts under **70ms** (!) on my (not so good) machine
+    [`undollar`](https://github.com/zpm-zsh/undollar)
+    [`colorize`](https://github.com/zpm-zsh/colorize)
+    [`zsh-autopair`](https://github.com/hlissner/zsh-autopair)
+    [`zsh-you-should-use`](https://github.com/MichaelAquilina/zsh-you-should-use)
+- Optional dependencies:
+  - `command-not-found` (Ubuntu / Fedora / macOS) or `pkgfile` (Arch Linux) - suggests packages to be installed if a command cannot be found.
+  - `grc` - makes output of `env`, `ping`, `traceroute` and many others more colorful.
+
+### `.p10k.zsh`
+
+- Basic `powerlevel10k` configuration which enables transient prompt
+- To reconfigure, type `p10k configure`
