@@ -1,7 +1,7 @@
 # .files
 
 <p align="center">
-  <img alt="screenshot" src="./images/screenshot.png">
+  <img alt="screenshot" src="./images/cast.svg">
 </p>
 
 ## Installation
