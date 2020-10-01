@@ -2,7 +2,7 @@
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
   print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
   command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-  command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+  command git clone --depth 1 https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
     print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
     print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
@@ -11,21 +11,21 @@ fi
 source "$HOME/.zinit/bin/zinit.zsh"
 
 # Load a few important annexes, without Turbo
-zinit light-mode for \
+zinit light-mode depth'1' for \
   zinit-zsh/z-a-as-monitor \
   zinit-zsh/z-a-patch-dl \
   zinit-zsh/z-a-bin-gem-node
 
 
 # Load powerlevel10k prompt
-zinit light-mode for \
+zinit light-mode depth'1' for \
   romkatv/powerlevel10k
 
 
 # Load syntax highlighting, autosuggestions and completions
 zstyle :plugin:history-search-multi-word reset-prompt-protect 1
 
-zinit wait lucid light-mode for \
+zinit wait lucid light-mode depth'1' for \
   atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
     zdharma/fast-syntax-highlighting \
   atload'_zsh_autosuggest_start' \
@@ -51,7 +51,7 @@ zinit wait lucid light-mode for \
   OMZL::theme-and-appearance.zsh
 
 # Load various zsh plugins after some time
-zinit wait'1' lucid light-mode for \
+zinit wait'1' lucid light-mode depth'1' for \
   OMZP::command-not-found \
   OMZP::common-aliases \
   OMZP::git \
