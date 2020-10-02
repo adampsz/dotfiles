@@ -60,7 +60,7 @@ zinit wait'1' lucid light-mode depth'1' for \
   zpm-zsh/undollar \
   hlissner/zsh-autopair \
   MichaelAquilina/zsh-you-should-use \
-  if'[ ! -f /bin/busybox ]' zpm-zsh/colorize
+  if'! command -v busybox &> /dev/null' zpm-zsh/colorize
 
 # Load environment-specific plugins
 zinit wait'2' lucid light-mode for \
