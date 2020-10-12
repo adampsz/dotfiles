@@ -46,12 +46,12 @@ zinit light-mode for \
 
 # Load less important zsh plugins
 # directories.zsh - allows traversing using `...`, `1`, etc
-zinit wait lucid light-mode for \
+zinit wait'0a' lucid light-mode for \
   OMZL::directories.zsh \
   OMZL::theme-and-appearance.zsh
 
 # Load various zsh plugins after some time
-zinit wait'1' lucid light-mode depth'1' for \
+zinit wait'0b' lucid light-mode depth'1' for \
   OMZP::command-not-found \
   OMZP::common-aliases \
   OMZP::git \
@@ -63,7 +63,7 @@ zinit wait'1' lucid light-mode depth'1' for \
   if'! command -v busybox &> /dev/null' zpm-zsh/colorize
 
 # Load environment-specific plugins
-zinit wait'2' lucid light-mode for \
+zinit wait'1a' lucid light-mode for \
   has'code' OMZP::vscode \
   has'docker' OMZ::plugins/docker/_docker \
   has'docker-compose' OMZP::docker-compose \
@@ -75,6 +75,10 @@ zinit wait'2' lucid light-mode for \
   has'dnf' OMZP::dnf \
   has'yum' OMZP::yum \
   has'zypper' OMZP::suse
+
+zinit wait'1b' lucid light-mode \
+  atload'_zsh_highlight_preexec_hook; zle reset-prompt' for \
+  id-as'null-prompt-reset' zdharma/null
 
 # Add various folders to path
 [ -d "$HOME/bin" ] && path+=("$HOME/bin")
